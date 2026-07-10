@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// --- 3D PARTICLE EFFECT ---
+// --- 3D PARTICLE EFFECT (ΔΙΟΡΘΩΜΕΝΟ ΓΙΑ ΤΟ VERCEL) ---
 function DustParticles() {
   const pointsRef = useRef<any>(null);
   const count = 3000;
@@ -33,7 +33,14 @@ function DustParticles() {
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute attach="attributes-position" count={positions.length / 3} array={positions} itemSize={3} />
+        {/* Προστέθηκε το args={[positions, 3]} για να μην χτυπάει σφάλμα στο build */}
+        <bufferAttribute 
+          attach="attributes-position" 
+          count={positions.length / 3} 
+          array={positions} 
+          itemSize={3} 
+          args={[positions, 3]} 
+        />
       </bufferGeometry>
       <pointsMaterial size={0.03} color="#a3e635" transparent opacity={0.6} sizeAttenuation />
     </points>
@@ -63,7 +70,7 @@ function App() {
     alert("Η κριτική σας υποβλήθηκε επιτυχώς και εκκρεμεί έγκριση από τη διαχείριση. Σας ευχαριστούμε!");
   };
 
-  // ΔΙΑΚΡΙΤΙΚΟ ΚΑΙ ΚΟΜΨΟ ΕΦΕ ΓΙΑ ΤΟΥΣ ΤΙΤΛΟΥΣ (ΧΩΡΙΣ ΦΟΥΛ 3D)
+  // ΔΙΑΚΡΙΤΙΚΟ ΚΑΙ ΚΟΜΨΟ ΕΦΕ ΓΙΑ ΤΟΥΣ ΤΙΤΛΟΥΣ
   const titleStyle = {
     letterSpacing: '0.04em',
     textShadow: '1px 1px 2px rgba(45, 62, 35, 0.08)'
@@ -111,7 +118,7 @@ function App() {
       <section id="home" className="relative pt-20 pb-12 flex flex-col items-center justify-center text-center bg-[#f4f1e6] overflow-hidden w-full">
         <div className="w-full shadow-2xl relative">
           <img 
-            src="/hero-top.jpeg" 
+            src="/hero-top.png" 
             alt="Πανό Χορτοφάγος" 
             className="w-full h-auto object-cover"
             style={{ imageRendering: '-webkit-optimize-contrast' }} 
@@ -141,10 +148,10 @@ function App() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 text-xl text-gray-700 leading-relaxed font-medium">
             <p className="text-2xl text-gray-800 font-bold">
-              Η ομάδα μας αποτελείται από ανθρώπου που νοιάζονται για την φροντίδα και την καλύτερη εξυπηρέτηση των αναγκών σας.
+              Η ομάδα μας αποτελείται από ανθρώπους που νοιάζονται για την φροντίδα και την καλύτερη εξυπηρέτηση των αναγκών σας.
             </p>
             <p>
-              Με συνέπεια, σύγχρονο εξοπλισμό και απόλυτο επαγγελματισμό, μεταμορφώνουμε και καθαρίζουμε κάθε εξωτερικό χώρο, προσφέροντας λύσεις που αντέχουν στον χρόνο. Επικοινωνήστε μαζί μας για μια δωρεάν εκτίμηση του χώρου σας.
+              Με συνέπεια, σύγχρονο εξοπλισμό and απόλυτο επαγγελματισμό, μεταμορφώνουμε και καθαρίζουμε κάθε εξωτερικό χώρο, προσφέροντας λύσεις που αντέχουν στον χρόνο. Επικοινωνήστε μαζί μας για μια δωρεάν εκτίμηση του χώρου σας.
             </p>
             
             {/* ΕΔΡΑ - ΣΕΡΡΕΣ ΚΑΙ ΠΕΡΙΧΩΡΑ */}
