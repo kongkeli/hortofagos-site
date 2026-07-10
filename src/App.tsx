@@ -118,7 +118,7 @@ function App() {
       <section id="home" className="relative pt-20 pb-12 flex flex-col items-center justify-center text-center bg-[#f4f1e6] overflow-hidden w-full">
         <div className="w-full shadow-2xl relative">
           <img 
-            src="/hero-top.png" 
+            src="/hero-top.jpeg" 
             alt="Πανό Χορτοφάγος" 
             className="w-full h-auto object-cover"
             style={{ imageRendering: '-webkit-optimize-contrast' }} 
