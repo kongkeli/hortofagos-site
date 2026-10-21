@@ -737,7 +737,7 @@ function App() {
             </button>
 
             <h3 className="text-2xl font-black text-[#2d3e23] mb-2 flex items-center gap-2">
-              <Lock className="text-[#7a8a47]" /> Διαχείριση Κριτικών Πελατών
+              <Lock className="text-[#7a8a47]" /> Διαχείριση
             </h3>
             <p className="text-xs text-gray-500 mb-6">Εγκρίνετε ή απορρίψτε τις νέες κριτικές που υποβάλλονται από τη σελίδα.</p>
 
