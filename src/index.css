@@ -1,13 +1,1 @@
-/* Διόρθωση οριζόντιου κεντραρίσματος αποκλειστικά για κινητά */
-@media (max-width: 768px) {
-  /* Αποφυγή οριζόντιου scroll και οριακό κεντράρισμα */
-  body {
-    overflow-x: hidden;
-  }
-  
-  /* Προσθήκη μικρού εσωτερικού περιθωρίου στις βασικές ενότητες για να μη κολλάνε δεξιά/αριστερά */
-  section {
-    padding-left: 12px !important;
-    padding-right: 12px !important;
-  }
-}
+@import "tailwindcss";
