@@ -753,7 +753,7 @@ function App() {
                 />
                 <button 
                   onClick={() => {
-                    if (adminPassword === "xerxe1000") {
+                    if (adminPassword === import.meta.env.VITE_ADMIN_PASSWORD) {
                       setIsAdminLoggedIn(true);
                     } else {
                       alert("Λάθος κωδικός!");
